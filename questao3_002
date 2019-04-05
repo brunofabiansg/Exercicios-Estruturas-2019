@@ -1,0 +1,26 @@
+#include<stdio.h>
+int divideDobra(int i, int j){
+	int quantidade;
+	int produto;
+	quantidade = 0;
+	int dobra;
+	int divisao;
+	divisao = i;
+	dobra = j;
+	while (divisao != 1){
+		produto = divisao*dobra;
+		printf("Resultado do produto agora eh: %d\n", produto);
+		divisao = divisao/2;
+		printf("Resultado da divisao agora eh: %d\n", divisao);
+		dobra = dobra *2;
+		printf("Resultado da dobra agora eh: %d\n", dobra);
+	}
+}
+main(){
+	int x,y;
+	printf("Escreva o primeiro numero:\n");
+	scanf("%d", &x);
+	printf("Escreva o segundo numero:\n");
+	scanf("%d", &y);
+	divideDobra(x, y);
+}
