@@ -1,0 +1,48 @@
+#include<stdio.h>
+
+
+int funcDobro(int num1){
+	int dobroNum1, dobroNum2;
+	dobroNum1 = num1 * 2;
+	return dobroNum1;
+}
+
+int funcMulti(int num1, int num2){
+	int resultMulti;
+	resultMulti = num1 * num2;
+	return resultMulti;
+}
+
+main (){
+	int a,b,dobro,dobro1,multi,result;
+	
+	printf ("Digite um numero inteiro positivo:\n");
+	scanf("%d",&a);
+	while (a <= 0){
+		printf("Digite um numero inteiro positivo:\n");
+		scanf("%d", &a);	
+	}
+	printf ("Seu numero positivo foi: %d\n",a);
+	
+	printf ("Digite um numero negativo:\n");
+	scanf ("%d", &b);
+	while (b > 0){
+	printf("Digite um numero negativo:\n");
+	scanf("%d", &b);
+	}
+
+	printf("Seu numero negativo foi: %d\n", b);
+	
+	dobro = funcDobro (a);
+	dobro1= funcDobro(b);
+	printf("O dobro eh: %d\n", dobro);
+	printf("O dobro eh: %d\n",dobro1);
+	multi = funcMulti(a,b);
+	printf("A multiplicacao entre os numeros eh: %d\n", multi);
+	
+	if (multi > 0)
+		printf("O resultado da multiplicacao eh Positivo.");
+	else if (multi <0)
+		printf("O resultado da multiplicacao eh Negativo.");
+}	
+	
