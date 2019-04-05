@@ -1,0 +1,19 @@
+#include<stdio.h>
+
+float calculoImc (float x, float y){
+	float imc;
+	imc = x/(y*y);
+	return imc;
+}
+
+main (){
+	float peso, altura, resultado;
+	printf("Digite o seu peso: ");
+	scanf("%d", &peso);
+	printf("Digite a sua altura: ");
+	scanf("%d", &altura);
+	resultado = calculoImc(peso, altura);
+	if (resultado < 18,5){
+		printf("Você está abaixo do peso.");
+	}
+}
