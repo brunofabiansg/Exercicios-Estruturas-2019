@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main(){
+	int idade, titulo;
+	char nome[30];
+	printf("Informe seu nome: ");
+	scanf("%s", &nome);
+	printf("Informe sua idade: ");
+	scanf("%d", &idade);
+	printf("Informe seu titulo: ");
+	scanf("%d", &titulo);	
+	printf("Seu nome eh %s.\n", &nome);
+	printf("A idade eh %d.\n", idade);
+	printf("Seu Titulo eh %d.\n", titulo);
+	
+	if ((idade >= 18) && (idade < 70)){
+		printf("Sua votacao eh obrigatoria.");
+	}
+	else
+		printf("Voce nao precisa votar se nao quiser. Seu voto eh facultativo.\n");
+//	if (idade )
+}
