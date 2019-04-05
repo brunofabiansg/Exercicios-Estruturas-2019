@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int converte(int x){
+	int segundagemTotal;
+	int segundos;
+	int minutos;
+	int horas;
+	segundagemTotal = x;
+	segundos = 0;
+	minutos = 0;
+	horas = 0;
+	while (segundagemTotal > 60){
+		segundagemTotal = segundagemTotal - 60;
+		minutos++;
+		if (minutos == 60){
+			minutos = 0;
+			horas = horas + 1;
+		}
+	}
+	segundos = segundagemTotal;
+	printf("%dh %dmin %dseg\n", horas, minutos, segundos);
+}
+
+main(){
+	int x;
+	printf("Converta segundos em horas, minutos e segundos:");
+	scanf("%d", &x);
+	converte(x);
+}
