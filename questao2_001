@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int main(){
+	int x;
+	x = resto(5, 2);
+	printf("%d", x);
+}
+
+int resto(int a, int b){
+	int x;
+	x = a % b;
+	return x;
+}
