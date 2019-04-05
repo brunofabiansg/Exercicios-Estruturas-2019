@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+float calculoImc (float x, float y){
+	float imc;
+	//printf("x = %.1f. ", x);
+	y = y / 100;
+	//printf("y = %.1f. \n", y);
+	imc = x/(y*y);
+	printf("Seu IMC eh: %.1f.\n", imc);
+	return imc;
+}
+
+main (){
+	float peso, altura, resultado;
+	printf("Vamos calcular o seu IMC?\n\n");
+	printf("Digite o seu peso(exemplo: 90.5): ");
+	scanf("%f", &peso);
+	printf("Digite a sua altura em centimetros(exemplo: 172): ");
+	scanf("%f", &altura);
+	printf("Seu peso eh: %.1f kg.\n", peso);
+	printf("Sua altura eh: %.1f cm.\n", altura);
+	resultado = calculoImc(peso, altura);
+	//printf("Resultado pegou valor de: %f", resultado);
+	if (resultado <= 18.5)
+		printf("Voce esta abaixo do peso.");
+	else if ((resultado >= 18.6) && (resultado <= 24.9))
+		printf("Voce esta saudavel. Parabens.");
+	else if ((resultado >=25) && (resultado <= 29.9))
+		printf("Voce esta com Peso em Excesso.");
+	else if ((resultado >= 30) && (resultado <= 34.9))
+		printf("Voce esta na faixa da Obesidade Grau I");
+	else if ((resultado >= 35) && (resultado <= 39.9))
+		printf("Voce esta na faixa da Obesidade Grau II (Severa)");
+	else if (resultado >= 40)
+		printf("Voce esta na faixa da Obesidade Grau III (Morbida)");
+}
