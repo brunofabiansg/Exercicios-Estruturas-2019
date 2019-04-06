@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int quadrado(x){
+	int y;
+	y = x*x;
+	printf("O quadrado de %d eh %d.\n", x, y);
+}
+int subtracao(x,y){
+	int z;
+	z = x- y;
+	printf("A subtracao de %d por %d eh %d.\n", x, y, z);
+}
+int addOne(x){
+	int y = x +1;
+	printf("O primeiro numero mais 1 eh: %d.\n", y);
+}
+
+main(){
+	int a, b;
+	printf("Insira um valor para A:");
+	scanf("%d", &a);
+	printf("Insira um valor para B:");
+	scanf("%d", &b);
+	if (a>0)
+		quadrado(a);
+	if ((b>10) && (b<100))
+		printf("O segundo numero esta entre 10 e 100 - intervalo permitido");
+	if (b<a)
+		subtracao(a,b);
+	else
+		addOne(a);
+}
