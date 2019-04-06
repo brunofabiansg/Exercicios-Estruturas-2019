@@ -1,0 +1,47 @@
+#include<stdio.h>
+int adicao(a,b){
+	return a + b;
+}
+int subtracao(a,b){
+	return a - b;
+}
+int multiplicacao(a,b){
+	return a * b;
+}
+int divisao(a,b){
+	return a / b;
+}
+
+main(){
+	int resposta, numA, numB, resultado;
+	numA = 15;
+	numB = 5;
+	printf("Dado A = 15 e B = 5\n");
+	printf("Escolha uma operacao entre A e B: \n1 - Adicao\n2 - Subtracao \n3 - Multiplicacao\n4 - Divisao\n");
+	scanf("%d", &resposta);
+	switch (resposta){
+		case 1:
+			printf("Resposta 1\n");
+			resultado = adicao(numA, numB);
+			printf("A Adicao eh %d.", resultado);
+			break;
+		case 2:
+			printf("Resposta 2\n");
+			resultado = subtracao(numA, numB);
+			printf("A subtracao eh %d.", resultado);
+
+			break;
+		case 3:
+			printf("Resposta 3\n");
+			resultado = multiplicacao(numA, numB);
+			printf("A multiplicacao eh %d.", resultado);
+
+			break;
+		case 4:
+			printf("Resposta 4\n");
+			resultado = divisao(numA, numB);
+			printf("A divisao eh %d.", resultado);
+
+			break;
+	}
+}
