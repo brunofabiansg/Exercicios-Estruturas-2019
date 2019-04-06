@@ -1,0 +1,52 @@
+#include<stdio.h>
+int dobro(a){
+	return a *2;
+}
+int quadrado(a){
+	return a *a;
+}
+int divisao(a,b){
+	return a / b;
+}
+int restoDivisao(a,b){
+	return a % b;
+}
+
+main(){
+	int resposta, numA, numB, resultado;
+	printf("Informe o primeiro numero: \n");
+	scanf("%d", &numA);
+	printf("Informe o segundo numero: \n");
+	scanf("%d", &numB);
+	printf("O primeiro numero eh %d, e o segundo numero eh %d.\n", numA, numB);
+	printf("Escolha uma operacao entre eles: \n1 - Dobro\n2 - Quadrado \n3 - Divisao\n4 - Resto da divisao\n");
+	scanf("%d", &resposta);
+	switch (resposta){
+		case 1:
+			printf("Resposta 1\n");
+			resultado = dobro(numA);
+			printf("O dobro do primeiro numero eh %d.\n", resultado);
+			resultado = dobro(numB);
+			printf("O dobro do segundo numero eh %d.\n", resultado);
+			break;
+		case 2:
+			printf("Resposta 2\n");
+			resultado = quadrado(numA);
+			printf("O quadrado do primeiro numero eh %d.\n", resultado);
+			resultado = quadrado(numB);
+			printf("O quadrado do segundo numero eh %d.\n", resultado);
+
+			break;
+		case 3:
+			printf("Resposta 3\n");
+			resultado = divisao(numA, numB);
+			printf("A entre eles eh %d.", resultado);
+
+			break;
+		case 4:
+			printf("Resposta 4\n");
+			resultado = restoDivisao(numA, numB);
+			printf("O resto da divisao eh %d.", resultado);
+			break;
+	}
+}
